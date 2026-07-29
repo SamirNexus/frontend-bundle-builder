@@ -1,0 +1,29 @@
+.main-layout {
+  display: grid;
+  width: min(1192px, calc(100% - 48px));
+  margin: 32px auto;
+  grid-template-columns: minmax(0, 768px) minmax(320px, 399px);
+  column-gap: 24px;
+  align-items: start;
+}
+
+.main-layout__builder,
+.main-layout__review {
+  width: 100%;
+  min-width: 0;
+}
+
+@media (max-width: 1100px) {
+  .main-layout {
+    width: min(768px, calc(100% - 32px));
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 24px;
+  }
+}
+
+@media (max-width: 520px) {
+  .main-layout {
+    width: min(100% - 24px, 768px);
+    margin-block: 16px;
+  }
+}

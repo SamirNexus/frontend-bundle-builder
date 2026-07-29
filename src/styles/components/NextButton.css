@@ -1,0 +1,45 @@
+.next-button {
+  min-width: 242px;
+  min-height: 40px;
+  margin: 16px auto 0;
+  padding: 8px 24px;
+
+  border: 1.5px solid #4e2de8;
+  border-radius: 8px;
+  background: transparent;
+  color: #4e2de8;
+
+  font: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.2;
+
+  cursor: pointer;
+  transition:
+    color 160ms ease,
+    background-color 160ms ease;
+}
+
+.next-button:hover {
+  color: #ffffff;
+  background: #4e2de8;
+}
+
+.next-button:focus-visible {
+  outline: 3px solid rgb(78 45 232 / 25%);
+  outline-offset: 3px;
+}
+
+.next-button:disabled {
+  border-color: #c7c3d6;
+  color: #928da6;
+  cursor: not-allowed;
+  background: transparent;
+}
+
+@media (max-width: 520px) {
+  .next-button {
+    width: 100%;
+    min-width: 0;
+  }
+}
