@@ -1,0 +1,28 @@
+.product-list {
+  display: grid;
+  width: 100%;
+  min-width: 0;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+.product-list > .product-card {
+  grid-column: span 2;
+  height: 100%;
+}
+
+.product-list > .product-card:last-child:nth-child(odd) {
+  grid-column: 2 / span 2;
+}
+
+@media (max-width: 680px) {
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+
+  .product-list > .product-card,
+  .product-list > .product-card:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+}

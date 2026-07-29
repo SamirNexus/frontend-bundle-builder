@@ -1,0 +1,30 @@
+.accordion {
+  overflow: hidden;
+  margin-bottom: 12px;
+  border: 1px solid #e5e1f4;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.accordion--open {
+  background-color: #eef4ff;
+}
+
+.accordion .step-label {
+  margin: 0;
+  padding: 20px 20px 0;
+}
+
+.accordion__content {
+  padding: 0 20px 20px;
+}
+
+@media (max-width: 520px) {
+  .accordion .step-label {
+    padding-inline: 14px;
+  }
+
+  .accordion__content {
+    padding-inline: 14px;
+  }
+}

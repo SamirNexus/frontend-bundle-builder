@@ -1,0 +1,39 @@
+.bundle-builder {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.bundle-builder__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bundle-builder__title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.bundle-builder__summary {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.bundle-builder__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bundle-builder__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.bundle-builder__next {
+  display: flex;
+  justify-content: center;
+}

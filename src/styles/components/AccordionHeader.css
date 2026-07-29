@@ -1,0 +1,94 @@
+.accordion-header {
+  margin: 0;
+}
+
+.accordion-header__trigger {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 12px 20px 20px;
+  border: 0;
+  background: transparent;
+  color: #17151f;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.accordion-header__trigger:focus-visible {
+  outline: 3px solid rgba(105, 82, 243, 0.3);
+  outline-offset: -3px;
+}
+
+.accordion-header__left {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  gap: 10px;
+}
+
+.accordion-header__icon {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.accordion-header__title {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.accordion-header__right {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 12px;
+}
+
+.accordion-header__selected {
+  color: #4e2fd2;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.accordion-header__arrow {
+  width: 12px;
+  color: #17151f;
+  font-size: 10px;
+  line-height: 1;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .accordion-header__trigger {
+    gap: 12px;
+    padding-inline: 14px;
+  }
+
+  .accordion-header__title {
+    font-size: 18px;
+  }
+
+  .accordion-header__selected {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .accordion-header__trigger {
+    align-items: flex-start;
+  }
+
+  .accordion-header__right {
+    gap: 6px;
+    padding-top: 4px;
+  }
+
+  .accordion-header__selected {
+    max-width: 52px;
+    text-align: right;
+  }
+}

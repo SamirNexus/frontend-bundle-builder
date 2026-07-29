@@ -1,0 +1,135 @@
+.plan-selector {
+  display: grid;
+  gap: 12px;
+}
+
+.plan-card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 22px 64px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+  padding: 22px;
+  color: #101828;
+  text-align: left;
+  background: #ffffff;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.plan-card:hover {
+  border-color: #c7bfff;
+}
+
+.plan-card--selected {
+  border-color: #6952f3;
+}
+
+.plan-card__radio {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #98a2b3;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.plan-card--selected .plan-card__radio {
+  border: 6px solid #6952f3;
+}
+
+.plan-card__image {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+}
+
+.plan-card__content,
+.plan-card__features {
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-card__content {
+  gap: 6px;
+}
+
+.plan-card__name {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.plan-card__description {
+  color: #475467;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.plan-card__features {
+  gap: 3px;
+  margin-top: 4px;
+  color: #344054;
+  font-size: 13px;
+}
+
+.plan-card__feature::before {
+  margin-right: 6px;
+  color: #6952f3;
+  content: "✓";
+}
+
+.plan-card__price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  white-space: nowrap;
+}
+
+.plan-card__price del {
+  color: #667085;
+  font-size: 13px;
+}
+
+.plan-card__price strong {
+  font-size: 20px;
+}
+
+.plan-card__price small {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.plan-card--none {
+  grid-template-columns: 22px minmax(0, 1fr) auto;
+}
+
+.plan-card__free {
+  color: #344054;
+}
+
+@media (max-width: 640px) {
+  .plan-card {
+    grid-template-columns: 22px 48px minmax(0, 1fr);
+    padding: 16px;
+  }
+
+  .plan-card__image {
+    width: 44px;
+    height: 44px;
+  }
+
+  .plan-card__price,
+  .plan-card__free {
+    grid-column: 3;
+    align-items: flex-start;
+  }
+
+  .plan-card--none {
+    grid-template-columns: 22px minmax(0, 1fr);
+  }
+
+  .plan-card--none .plan-card__free {
+    grid-column: 2;
+  }
+}
