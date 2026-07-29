@@ -1,0 +1,16 @@
+[
+  {
+    "id": "cam-unlimited",
+    "name": "Cam Unlimited",
+    "description": "Protect every camera in your system with smart alerts and unlimited cloud video history.",
+    "price": 9.99,
+    "oldPrice": 12.99,
+    "billingPeriod": "/mo",
+    "image": "/images/review/cam-unlimited.png",
+    "features": [
+      "Unlimited cameras",
+      "Smart AI detections",
+      "Cloud video history"
+    ]
+  }
+]
