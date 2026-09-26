@@ -1,5 +1,11 @@
 # Frontend Bundle Builder
 
+[![CI](https://github.com/SamirNexus/frontend-bundle-builder/actions/workflows/ci.yml/badge.svg)](https://github.com/SamirNexus/frontend-bundle-builder/actions/workflows/ci.yml)
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+
+**[View the live demo](https://frontend-bundle-builder-alpha.vercel.app/)**
+
 A responsive React prototype for building a personalized security system. The
 shopper moves through a four-step accordion while a live review panel keeps
 selected products, variants, quantities, discounts, and totals synchronized.
@@ -157,3 +163,16 @@ The test suite covers:
 
 The production bundle is generated with TypeScript checking through
 `npm run build`.
+
+## Portfolio highlights
+
+- Translated a Figma product flow into reusable, typed React components
+- Modelled independent product-variant quantities without duplicated UI state
+- Added defensive local persistence with validation and graceful fallbacks
+- Covered pricing, state synchronization, persistence, and accessibility with 10 automated tests
+- Delivered a responsive production build that works down to a 320px viewport
+
+## Author
+
+**Mohamed Samir** — Front-End Developer  
+[GitHub](https://github.com/SamirNexus) · [LinkedIn](https://www.linkedin.com/in/samirnexus98/)
