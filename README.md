@@ -35,6 +35,37 @@ selected products, variants, quantities, discounts, and totals synchronized.
 - Vitest
 - Testing Library
 
+## Architecture at a glance
+
+```mermaid
+flowchart LR
+  Data[Typed catalog JSON] --> Main[Main state owner]
+  Main --> Builder[Bundle builder]
+  Main --> Review[Live review panel]
+  Builder --> Main
+  Review --> Main
+  Main --> Storage[Validated localStorage persistence]
+  Utils[Pricing & selection utilities] --> Main
+  Tests[Vitest + Testing Library] --> Utils
+  Tests --> Builder
+  CI[GitHub Actions] --> Lint[ESLint]
+  CI --> Test[Vitest]
+  CI --> Build[Vite production build]
+  Deploy[Vercel] --> App[React application]
+```
+
+## Recruiter quick scan
+
+- React 19 + TypeScript with a single source of truth for synchronized builder/review state
+- Discriminated unions for simple and variant products
+- Independent quantities per product variant without duplicated UI state
+- Defensive localStorage persistence with validation and graceful fallback
+- Dynamic pricing, compare-at totals, and savings calculations
+- Keyboard-accessible quantity controls and ARIA labels
+- 10 focused automated tests across pricing, variants, persistence, and controls
+- GitHub Actions running lint, tests, and production build
+- Live deployment on Vercel
+
 ## Getting started
 
 Requirements:
